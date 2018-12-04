@@ -118,9 +118,7 @@
 源码地址： https://github.com/halibobo/runnerbar-image
 
 ### 最后
-整个过程从开始到结束都在一天内完成的，代码里也没有什么复杂的逻辑，但完成之后心里还是有很多的满足感，哈哈....让我骄傲一会  。。。
-贴上完赛信息
-![enter image description here](https://github.com/halibobo/BlogImage/blob/master/blog/batulu/mmexport1528499659901.jpg?raw=true)
+整个过程从开始到结束都在一天内完成的，代码里也没有什么复杂的逻辑，但完成之后心里还是有很多的满足感。
 
 
 最后贴上一句我很喜欢的赛事宣传语
