@@ -12,11 +12,7 @@ import datetime
 import os
 
 def getRaceInfo(id,page):
-    # resp = request.urlopen(url)        
-    # html_data = resp.read().decode('utf-8')    
-    # soup = bs(html_data, 'html.parser')  
     url='http://m.yundong.runnerbar.com/yd_mobile/share/album.json'
-    # http://m.yundong.runnerbar.com/yd_mobile/share/album.json
     para = {'activity_id':id,'page':page,'pageSize':100}
     header = {}
     r = requests.post(url,data=para,headers= header)
@@ -26,7 +22,6 @@ def getRaceInfo(id,page):
     items = []
     count = json_r['album']['activity_photo_count']
     for item in parsed_json:
-        # print(item['user_img'])
         items.append(item)
     activity['items'] = items
     activity['count'] = count
@@ -36,14 +31,13 @@ def getRaceInfo(id,page):
 def startRace(id):
     row_index = 1001
     workbook = xlwt.Workbook(encoding = 'utf-8')
-    # worksheet = workbook.add_sheet('image', cell_overwrite_ok=True)
     try:
         activity = getRaceInfo(id,1)
         tempdata = activity['items']
         count = int(activity['count'])
         if count > 0:
             print(id,count)
-            for i in range(11,int(count/100+2)):
+            for i in range(1,int(count/100+2)):
                 try:
                     data = getRaceInfo(id,i)['items']
                     for item in data:
